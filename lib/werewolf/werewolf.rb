@@ -27,9 +27,10 @@ class Werewolf
   def consumes(victim)
     if wolf?
       @eaten << victim
+      victim.status = :dead
     else
       @eaten
-    end 
+    end
   end
 
 end
