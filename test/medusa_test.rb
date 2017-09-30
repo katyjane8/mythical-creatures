@@ -1,8 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/medusa'
-require '../lib/person'
+require './lib/medusa'
+require './lib/person'
 
 class MedusaTest < Minitest::Test
   def test_it_has_a_name
@@ -34,8 +34,10 @@ class MedusaTest < Minitest::Test
   end
 
   def test_can_only_have_three_victims
-    skip
-    # your code here
+    medusa = Medusa.new("Cassiopeia")
+    victim = Person.new("Perseus", "Kingslayer", "Tyrion")
+
+    assert_equal 3, victim.count
   end
 
   def test_if_a_fourth_victim_is_stoned_first_is_unstoned

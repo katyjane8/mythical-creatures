@@ -1,4 +1,4 @@
-require '../lib/person'
+require_relative 'person'
 
 class Medusa
   attr_reader :name, :statues
@@ -19,5 +19,5 @@ class Medusa
       false
     end
   end
-  
+
 end

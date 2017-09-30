@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'werewolf'
+require './lib/werewolf'
 
 class WerewolfTest < Minitest::Test
   def test_it_has_a_name
@@ -76,7 +76,7 @@ class WerewolfTest < Minitest::Test
     skip
     # your code here
   end
-  
+
   def test_cannot_consume_victim_if_in_human_form
     skip
     # your code here
