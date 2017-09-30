@@ -6,6 +6,7 @@ class Centaur
     @breed = breed
     @cranky = false
     @standing = true
+    @laying = false
     @count = 0
   end
 
@@ -29,10 +30,31 @@ class Centaur
 
   def cranky?
     @cranky = true if @count >= 3
+    @cranky
   end
 
   def standing?
     @standing
+  end
+
+  def sleep
+    @count = 0
+    @cranky = false
+    "NO!" if standing?
+  end
+
+  def lay_down
+    @standing = false
+    @laying = true
+    @cranky = true
+  end
+
+  def laying?
+    @laying
+  end
+
+  def stand_up
+    @standing = true 
   end
 
 end
