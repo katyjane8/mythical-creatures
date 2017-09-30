@@ -1,17 +1,17 @@
 class Person
-  attr_reader :name, :stoned
+  attr_reader :stoned, :name
 
-  def initialize(name, stoned = false)
+  def initialize(name)
     @name = name
-    @stoned = stoned
+    @stoned = false
   end
 
   def stoned?
-    if @stoned == false
-      @stoned = false
-    else
-      @stoned = true
-    end
+    @stoned
+  end
+
+  def is_stoned
+    @stoned = true
   end
 
 end

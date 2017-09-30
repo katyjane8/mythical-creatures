@@ -34,6 +34,7 @@ class MedusaTest < Minitest::Test
   end
 
   def test_can_only_have_three_victims
+    skip
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus", "Kingslayer", "Tyrion")
 

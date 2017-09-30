@@ -5,6 +5,7 @@ require './lib/centaur'
 
 class CentaurTest < Minitest::Test
   def test_it_has_a_name
+    skip
     centaur = Centaur.new("George","Palomino")
     assert_equal "George", centaur.name
   end

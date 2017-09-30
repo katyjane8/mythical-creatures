@@ -1,4 +1,5 @@
-require_relative 'person'
+require './lib/person'
+require 'pry'
 
 class Medusa
   attr_reader :name, :statues
@@ -10,14 +11,6 @@ class Medusa
 
   def stare(victim)
     @statues << victim
+    victim.is_stoned
   end
-
-  def stoned
-    if stare(victim)
-      @stoned == true
-    else
-      false
-    end
-  end
-
 end
