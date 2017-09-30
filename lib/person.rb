@@ -14,4 +14,7 @@ class Person
     @stoned = true
   end
 
+  def is_unstoned
+    @stoned = false
+  end 
 end

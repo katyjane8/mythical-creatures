@@ -13,4 +13,12 @@ class Medusa
     @statues << victim
     victim.is_stoned
   end
+
+  def victim_limit
+    @statues.count
+    @statues[0].is_unstoned
+    @statues = @statues[0..2]
+  end
+
+
 end
