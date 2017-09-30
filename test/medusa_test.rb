@@ -1,8 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/medusa'
-require './lib/person'
+require './lib/medusa/medusa'
+require './lib/medusa/person'
 
 class MedusaTest < Minitest::Test
   def test_it_has_a_name
@@ -64,5 +64,4 @@ class MedusaTest < Minitest::Test
     assert victim_4.stoned?
     refute victim.stoned?
   end
-
 end

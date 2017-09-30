@@ -1,4 +1,4 @@
-require './lib/person'
+require './lib/medusa/person'
 require 'pry'
 
 class Medusa
@@ -19,6 +19,5 @@ class Medusa
     @statues[0].is_unstoned
     @statues = @statues[0..2]
   end
-
 
 end
