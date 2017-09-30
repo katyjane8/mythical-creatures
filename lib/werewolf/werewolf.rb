@@ -24,4 +24,12 @@ class Werewolf
     wolf? && @eaten == []
   end
 
+  def consumes(victim)
+    if wolf?
+      @eaten << victim
+    else
+      @eaten
+    end 
+  end
+
 end

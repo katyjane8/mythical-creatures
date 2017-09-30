@@ -61,11 +61,13 @@ class WerewolfTest < Minitest::Test
     assert werewolf.hungry?
   end
 
-
-
   def test_consumes_a_victim
     werewolf = Werewolf.new("David","London")
     victim_1 = Victim.new
+    werewolf.change!
+    werewolf.consumes(victim_1)
+
+    assert_equal 1, werewolf.eaten.count
   end
 
   def test_cannot_consume_victim_if_in_human_form
