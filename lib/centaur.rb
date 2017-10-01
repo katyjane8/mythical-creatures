@@ -8,6 +8,8 @@ class Centaur
     @standing = true
     @laying = false
     @count = 0
+    @rested = true 
+    @sick = false
   end
 
   def shoot
@@ -54,7 +56,20 @@ class Centaur
   end
 
   def stand_up
-    @standing = true 
+    @standing = true
+  end
+
+  def drink
+    @rested = true
+
+  end
+
+  def rested?
+    @rested
+  end
+
+  def sick?
+    @sick = true if rested?
   end
 
 end
